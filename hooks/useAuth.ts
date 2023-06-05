@@ -19,7 +19,7 @@ const useAuth = () => {
   // GitHubでサインイン
   const signInWithGithub = async () => {
     try {
-      const { error } = await supabase.auth.signInWithOAuth({ provider: "github" });
+      const { error } = await supabase.auth.signInWithOAuth({ provider: "google" });
       if (error) {
         setError(error.message);
       }
